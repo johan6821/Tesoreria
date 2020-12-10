@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "b7f49a86-a877-40fb-9e7a-77275e4ca214",
+		"name": "Employee",
+		"description": "Collección de Empleados fonyou",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get By Id Employee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8191/employee/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8191",
+					"path": [
+						"employee",
+						"2"
+					]
+				},
+				"description": "Obtener Empleado por Id"
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener una lista de empleados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8191/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8191",
+					"path": [
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear un empleado",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Jair\",\r\n    \"apellido\": \"peña\",\r\n    \"fechaIngreso\": \"2040-02-09\",\r\n    \"salario\": 1200000.02,\r\n    \"fechaSalida\": \"2020-08-11\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8191/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8191",
+					"path": [
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar empleado",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"MARITZA\",\r\n    \"apellido\": \"GOMEZ D\",\r\n    \"fechaIngreso\": \"2015-02-09\",\r\n    \"salario\": 1200000.02,\r\n    \"fechaSalida\": \"2020-01-11\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8191/employee/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8191",
+					"path": [
+						"employee",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cantidad a pagar empleado",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"mes\": 3,\r\n    \"año\": 2018,\r\n    \"idEmpleado\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8191/employee/pay",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8191",
+					"path": [
+						"employee",
+						"pay"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
